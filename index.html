@@ -8,14 +8,16 @@
     <title>Lays's Yellow Trend</title>
     <link rel = "shortcut icon" href = "img/image2.png" type = "image/png">
     <link href = "style.css" rel = "stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     
     <div class="header-wrap">
-        <div class = "header">
+        <div class = "header ">
+            
             <!-- логотип Lay's -->
             <div class = "header-logo">
-                <a class = "header-logo__link" href = "#">
+                <a class = "header-logo__link" >
                 <img src = "img/image2.png" class = "header-logo__image">
                 <p class = "header-logo__text">#летосLays</p>
                 </a> 
@@ -27,12 +29,40 @@
                 <div class="mobile-menu__line mobile-menu__line_3"></div>
             </div>      
 
+            <div class = "header-menu-mobile">
+                <div class = "header-menu-mobile__item mobile-menu__gallery">
+                    <a class = "header-menu-mobile__link" href="#">
+                        <div class = "moblie-menu__icon"></div>
+                        <p class = "mobile-menu__text">Галерея</p>
+                    </a>
+                </div>
+                <div class = "header-menu-mobile__item mobile-menu__about">
+                    <a class = "header-menu-mobile__link" href="#">
+                        <div class = "moblie-menu__icon"></div>
+                        <p class = "mobile-menu__text">О проекте</p>
+                    </a>
+                </div>
+                <div class = "header-menu-mobile__item mobile-menu__summer">
+                    <a class = "header-menu-mobile__link" href="#">
+                        <div class = "moblie-menu__icon"></div>
+                        <p class = "mobile-menu__text">Лето с Lays's</p>
+                    </a>
+                </div>
+                <div class = "header-menu-mobile__item mobile-menu__close">
+                    <a class = "header-menu-mobile__link mobile-menu__link-close">
+                        <p class = "mobile-menu__text mobile-menu__text-close">СВЕРНУТЬ МЕНЮ</p>
+                    </a>
+                </div>
+            </div>
+
             <div class = "header-menu">
                 <div class = "header-menu__item">
                     <a class = "header-menu__link" href="#">
+                        
                         <div class = "icon-wrapper">
                             <div class = "header-menu__icon header-menu__icon_1"></div>
                             <p class = "header-menu__text">Галерея</p>
+                        
                         </div>
                     </a>
                 </div>
@@ -179,5 +209,11 @@
             </div>
         </div>
     </div>
+    
+    <script src = "js/scroll-animation.js"></script>
+    <script src = "js/baloon-zoom-animation.js"></script>
+    <script src = "js/mobile-menu-animation.js"></script>
+    <script src = "js/summer-zoom-animation.js"></script>
+    <script src = "head.js"></script>
 </body>
 </html>

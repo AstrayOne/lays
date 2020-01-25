@@ -23,25 +23,27 @@ ul
     list-style:none;
 }
 
+
+
 .header-wrap
 {
+    z-index:100;
     position: fixed;
     height: 100%;
     width: 150px;
     left: 0px; 
     top: 0px; 
-   
+
     background:#f6f6f6;
 }
 
 .header-logo
 {
-    padding-top: 26px;
+
     height: 179px;
-    
 }
 
-.header-logo__text
+.header-logo__text 
 {
     padding-top: 14px;
     text-align: center;
@@ -53,6 +55,7 @@ ul
 
 .header-logo__link
 {
+    cursor:pointer;
     height: 179px;
     display: block;
     text-decoration: none;
@@ -60,22 +63,184 @@ ul
 
 .header-logo__image
 {
+    padding-top: 26px;
     display:block;
     margin: 0 auto;
 }
 
+.header-menu-mobile
+{
+    position:absolute;
+    z-index:50;
+    top: 80px;
+    height:320px;
+    width:100%;
+    display:block;
+    visibility: hidden;
+
+    overflow:hidden;
+}
+
+
+.header-menu__item
+{
+    height: 118px;
+    width:auto;
+    text-align: center;
+
+    
+}
+
+.header-menu-mobile__item
+{
+
+    height: 80px;
+    width:100%;
+    transition: all 0.5s ease-out;
+    opacity:0;
+
+}
+
+.header-menu-mobile__link
+{
+    display: block;
+    height:79px;
+    width:100%;
+    text-decoration:none;
+    border-top: 1px solid #ddd;
+    
+    background:#f6f6f6;
+    
+}
+.mobile-menu__text
+{
+    line-height: 80px;
+    text-align: center;
+    
+    font-size: 14px;
+    color: #555;
+}
+
+.mobile-menu__visible
+{
+    visibility: visible;
+    z-index:200;
+    transition: all 0.5s ease-out;
+    display: block;
+    
+}
+
+.mobile-menu__gallery
+{
+    
+    transform:translate(-60px,0);
+    background-size:40px 40px;
+    background-image:url("img/image.png");
+    
+}
+.mobile-menu__gallery::after
+{
+    position: absolute;
+    content: "";
+    left:28px;
+    top: 20px;
+    background-size:40px 40px;
+    background-image:url("img/image.png");
+    width:40px;
+    height:40px;
+}
+
+.mobile-menu__about
+{
+    transform:translate(60px,0);
+    background-size:40px 40px;
+    background-image:url("img/image0.png");
+    
+}
+
+.mobile-menu__about::after
+{
+    position: absolute;
+    content: "";
+    left:28px;
+    top: 20px;
+    background-size:40px 40px;
+    background-image:url("img/image0.png");
+    width:40px;
+    height:40px;
+}
+
+.mobile-menu__summer
+{
+    transform:translate(-60px,0);
+    background-size:40px 40px;
+    background-image:url("img/image1.png");
+
+}
+
+.mobile-menu__summer::after
+{
+    position: absolute;
+    content: "";
+    left:28px;
+    top: 20px;
+    background-size:40px 40px;
+    background-image:url("img/image1.png");
+    width:40px;
+    height:40px;
+}
+
+.mobile-menu__close
+{
+    
+    transform:translate(60px,0);
+}
+
+.mobile-menu__link-close
+{
+    height: 60px;
+}
+
+.mobile-menu__text-close
+{
+    background: #f0eded;
+    color: #8e8d8d;
+
+    height: 60px;
+    line-height: 60px;
+}
+
+
+.mobile-menu__animate
+{
+    display:block;
+    transition: all 0.5s ease-out;
+    transform: translate(0,0);
+    opacity: 1;
+}
+
 .header-menu__link{
 
-    height:118px;
+    height:116px;
     display: block;
     text-decoration: none;
-    color: black;
-    transition: 1s ease;
+    
+    transition: all 1s ease-out;
+    border-top: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.header-menu__link:hover
+{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .header-menu__link:hover
 {
     background-color: white;
+
+    
 }
 .icon-wrapper
 {
@@ -84,6 +249,8 @@ ul
     height: 100px;
     
 }
+
+
 .header-menu__icon
 {
     margin: 0 auto;
@@ -128,17 +295,15 @@ ul
     letter-spacing:0px;
 }
 
-.header-menu__item
-{
-    height: 118px;
-    width:auto;
-    text-align: center;
-}
+
 
 .content-wrap
 {
+    z-index:100;
+
     margin-left: 150px;
     max-width: 1770px;
+    background-color: #ffda2d;
 }
 
 
@@ -321,6 +486,7 @@ ul
 
 .gallery-list
 {
+    background-color: white;
     float: left;
  
     width:50%;
@@ -415,6 +581,7 @@ ul
     height: 15.9rem;
 }
 .prizes-about{
+    z-index: 50;
     position: relative;
     width: 50%;
     height: 100%;
@@ -423,12 +590,20 @@ ul
     background-size: cover ;
     background-repeat: no-repeat;
     background-position: center;
+    
+    transform: translate(-2rem,0);
+
+    
+
+
+    opacity:0;
+    
 }
 
-.prizes-about::after
+.prizes-about::before
 {
     position: absolute;
-    z-index:1;
+    
     content:"";
     background-image: url("img/right-triangle.png");
     background-size: 100% 100%;
@@ -437,7 +612,11 @@ ul
     right: -1.1rem;
     width: 1.66rem;
     height: 3.86rem;
+
+
 }
+
+
 
 .prizes-about__text{
     position: relative;
@@ -457,7 +636,7 @@ ul
     height: 6.75rem;
 }
 
-.button
+.button 
 {
     position: absolute;
     cursor: pointer;
@@ -512,14 +691,23 @@ ul
 
 .prizes-baloon
 {
+    
+    
     position: relative;
     float: left;
     width: 50%;
     height: 100%;
+    overflow: hidden;
+
+    opacity:0;
+    transform: translate(2rem,0);
 
 }
+
+
 .baloon__image
 {
+    
     position: relative;
     background-image: url("img/about_img.3f56954a.jpg");
     background-repeat: no-repeat;
@@ -527,31 +715,49 @@ ul
     background-position: center;
     width: 100%;
     height: 100%;
+
+    
+    
 }
+
+
+
 
 .summer
 {
+    position:relative;
     width:  100%;
     height: 15.95rem;
 }
 
 .summer-promo
 {
+    position:relative;
     float: left;
     width: 50%;
     height: 100%;
-    background-image: url("img/lays_img.5f4a68cd.jpg");
-    background-size: 101% ;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+
+    opacity:0;
+    transform: translate(-2rem,0);
+
+    
+
+    overflow: hidden;
 }
 .summer-promo__image
 {
+    position:relative;
+
     width: 100%;
     height: 100%;
     background-image: url("img/lays_img_mobile.22a44045.jpg");
+    background-image: url("img/lays_img.5f4a68cd.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
+    background-size: cover;
+
+    
 }
 
 .summer-map
@@ -564,6 +770,11 @@ ul
     background-size: cover ;
     background-repeat: no-repeat;
     background-position: center;
+
+    opacity:0;
+    transform: translate(2rem,0);
+
+    
 }
 
 .summer-map::before
@@ -595,6 +806,27 @@ ul
     top:13rem;
     left:5.05rem;
 }
+
+.animated
+{
+    
+    transform: scale(1.2);
+    transition: all 10s ease-out;
+}
+
+.noanimated
+{
+    transform: scale(1.0);
+    transition: all 10s ease-out;
+}
+
+.scroll-animated
+{
+    transform:translate(0,0);
+    opacity:1;
+    transition: all 1s ease-out;
+}
+
 .footer
 {
     float: left;
@@ -642,7 +874,7 @@ ul
     background-size: 52px 49px;
 }
 
-.social:hover
+.social__item:hover
 {
     opacity:1;
 }
@@ -820,17 +1052,24 @@ ul
     {
         max-width:680px;
     }
-   
+
+    .header
+    {
+        width:100%;
+    }
     .header-wrap
     {
-        z-index:1000;
+        z-index:100;
         position: fixed; 
         width:100%;
-        height:77px;
+        height:80px;
+
         left: 0px; 
         top: 0px; 
         
     }
+
+    
     .header-logo
     {
         position: relative;
@@ -841,7 +1080,7 @@ ul
     .header-logo__text
     {
         
-        padding-top: 25px;
+        padding-top: 28px;
         padding-left: 12px;
         text-align: center;
         font-weight: bold;
@@ -853,7 +1092,7 @@ ul
     {
         cursor:pointer;
         width:100%;
-        height:100%;
+        height:80px;
         display: block;
         text-decoration: none;
     }
@@ -861,10 +1100,10 @@ ul
     .header-logo__image
     {
         position: absolute;
-        top:11px;
+        top:15px;
         left: 18px;
         height:50px;
-
+        padding-top:0;
         margin: 0;
     }
 
@@ -874,7 +1113,7 @@ ul
         position:absolute;
         width: 33px;
         height:33px;
-        top:24px;
+        top:26px;
         right: 24px;
         
     }
@@ -886,30 +1125,57 @@ ul
         width:33px;
         height:5px;
         background-color: red;
+
+        transition: all .2s ease-in-out;
+        transform-origin: left center;
     }
     .mobile-menu__line_1
     {
         top:0px;
+
+        transform: rotate(0deg);
         
     }
     .mobile-menu__line_2
     {
         top:11px;
+        display:visible;
         
     }
     .mobile-menu__line_3
     {
         top:21px;
+
+        transform: rotate(0deg);
         
+    }
+
+    .line-animate1
+    {
+        
+        transform: rotate(45deg) translate(0px,-1px); ;
+        
+    }
+
+    .line-animate2
+    {
+        opacity:0;
+    }
+
+    .line-animate3
+    {
+        
+        transform: rotate(-45deg) translate(-1px,1px);;
     }
 
     .header-menu
     {
         display:none;
     }
+
     .content-wrap
     {
-        margin-top:77px;
+        margin-top:80px;
         margin-left:0px;
     }
     .promo
@@ -1081,11 +1347,13 @@ ul
 
     .prizes-about
     {
+        opacity:1;
         z-index: 1;
         position: relative;
         height: 50%;
         width: 100%;
         background-image: url("img/about_block_mobile.088df3d6.png");
+        transform: translate(0,0);
     }
     .mobile
     {
@@ -1121,7 +1389,7 @@ ul
         
     }
 
-    .prizes-about::after
+    .prizes-about::before
     {
         display:none;
     }
@@ -1136,16 +1404,21 @@ ul
         top:30rem;
         left: 50%;
         margin-left: -6.95rem;
+
+        
     }
 
     .prizes-baloon
     {
+        opacity:1;
         z-index:0;
         position:absolute;
         top:50%;
         height: 50%;
         width: 100%;
         background: none;
+        overflow:visible;
+        transform: translate(0,0);
     }
     .baloon__image
     {
@@ -1166,7 +1439,7 @@ ul
     .summer
     {
         position: relative;
-        z-index: 1;
+        
         height: 81rem;
         width: auto;
         background-color: white;
@@ -1179,12 +1452,15 @@ ul
         height: 50%;
         float: top;
         position: absolute;
-
+        opacity:1;
         left:0px;
         top: 50%;
         background-image: url("img/lays_img_mobile.22a44045.jpg");
         background:none;
         background-size: cover;
+        overflow:visible;
+
+        transform: translate(0,0);
     }
 
     .summer-promo__image
@@ -1204,11 +1480,12 @@ ul
     .summer-map
     {
         margin-top: 4px;
-        
+        opacity:1;
         width: 100%;
         height: 320px;
         height: 40rem;
         
+        transform: translate(0,0);
         
         background-image: url("img/lays_block_mobile.823e2bd0.png");
     }
