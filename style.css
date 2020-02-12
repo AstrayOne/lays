@@ -198,6 +198,7 @@ ul
 
 .mobile-menu__link-close
 {
+    cursor:pointer;
     height: 60px;
 }
 
@@ -1181,6 +1182,7 @@ ul
     {
         margin-top:80px;
         margin-left:0px;
+        background-color: white;
     }
     .promo
     {
