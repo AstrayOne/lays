@@ -300,7 +300,7 @@ ul
 .content-wrap
 {
     z-index:100;
-
+    overflow: hidden;
     margin-left: 150px;
     max-width: 1770px;
     background-color: #ffda2d;
@@ -347,7 +347,8 @@ ul
 }
 .promo-list__text
 {
-    font-family:  "GothamPro-Medium","Arial", sans-serif;
+    
+    font-family:  "GothamPro","Arial", sans-serif;
     padding-top: 0.4rem;
     line-height:0.53rem;
     text-align: center;
@@ -843,6 +844,9 @@ ul
     float:left;
     width: 82px;
     height: 96px;
+
+    width: 76px;
+    height: 99px;
 }
 
 .copyright__text{
@@ -882,25 +886,25 @@ ul
 .social__item_fb
 {    
     background-color: #326aa2;
-    background-image:url("img/image.jpeg");
+    background-image:url("img/icon-fb.jpg");
 }
 
 .social__item_vk
 {
     background-color: #3479a8;
-    background-image:url("img/image0.jpeg");
+    background-image:url("img/icon-vk.jpg");
 }
 
 .social__item_site
 {
     background-color: #edbf11;
-    background-image:url("img/image1.jpeg");
+    background-image:url("img/icon-site.jpg");
 }  
 
 .social__item_yt
 {
     background-color: #c4070e;
-    background-image:url("img/image2.jpeg");
+    background-image:url("img/icon-yt.jpg");
 }
 
 @font-face 
@@ -1144,7 +1148,7 @@ ul
     }
     .mobile-menu__line_3
     {
-        top:21px;
+        top:22px;
 
         transform: rotate(0deg);
         
@@ -1440,7 +1444,7 @@ ul
     {
         position: relative;
         
-        height: 81rem;
+        height: 80rem;
         width: auto;
         background-color: white;
     }
@@ -1482,7 +1486,7 @@ ul
         margin-top: 4px;
         opacity:1;
         width: 100%;
-        height: 320px;
+        
         height: 40rem;
         
         transform: translate(0,0);
