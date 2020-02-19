@@ -1,8 +1,7 @@
 
 let flag = false;
 
-let element = $(".header-logo__image");
-let element1 = $('.header-logo__link');
+
 
 if ($(window).width() <= 680)
 {

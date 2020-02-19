@@ -355,6 +355,7 @@ ul
     text-align: center;
     font-size: 0.4rem;
     letter-spacing:-0.2px;
+    
 }
 
 .promo-list__span
@@ -811,7 +812,6 @@ ul
 
 .animated
 {
-    
     transform: scale(1.2);
     transition: all 10s ease-out;
 }
@@ -822,12 +822,14 @@ ul
     transition: all 10s ease-out;
 }
 
+
 .scroll-animated
 {
     transform:translate(0,0);
     opacity:1;
-    transition: all 1s ease-out;
+    transition: all 1s ease;
 }
+
 
 .footer
 {
