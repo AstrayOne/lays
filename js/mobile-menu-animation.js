@@ -2,8 +2,7 @@
 let flag = false;
 
 
-
-if ($(window).width() <= 680)
+if ($(window).width() < 680)
 {
 
     document.onclick = function(e)
@@ -47,6 +46,7 @@ if ($(window).width() <= 680)
         closeMobileMenu();
     });
 }
+
 
 
 

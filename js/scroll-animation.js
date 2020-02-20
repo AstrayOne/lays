@@ -1,7 +1,7 @@
 
-jQuery(document).ready(function($) 
-{  
 
+if ($(window).width() > 680)
+{
     $(window).scroll(function()
     {
         scrollAnimate($('.prizes-about'));
@@ -15,8 +15,10 @@ jQuery(document).ready(function($)
     scrollAnimate($('.prizes-baloon'));
     scrollAnimate($('.summer-promo'));
     scrollAnimate($('.summer-map'));
-    
-});   
+
+    promoSlide();
+}
+
 
 
 
@@ -38,4 +40,11 @@ function scrollAnimate(element)
         element.addClass('scroll-animated');
     }
     
+}
+
+
+function promoSlide()
+{
+    $(".promo").addClass('scroll-animated');
+    $(".gallery").addClass('scroll-animated');
 }
