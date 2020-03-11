@@ -1,21 +1,21 @@
 
+let windowWidth = window.innerWidth;
 
-if ($(window).width() > 680)
+
+if (windowWidth > 680)
 {
-    $(window).scroll(function()
-    {
-        scrollAnimate($('.prizes-about'));
-        scrollAnimate($('.prizes-baloon'));
-        scrollAnimate($('.summer-promo'));
-        scrollAnimate($('.summer-map'));
 
+    window.addEventListener('scroll', function() {
+        scrollAnimate(document.querySelector('.js-prizes-about'));
+        scrollAnimate(document.querySelector('.js-prizes-baloon'));
+        scrollAnimate(document.querySelector('.js-summer-promo'));
+        scrollAnimate(document.querySelector('.js-summer-map'));
     });
 
-    scrollAnimate($('.prizes-about'));
-    scrollAnimate($('.prizes-baloon'));
-    scrollAnimate($('.summer-promo'));
-    scrollAnimate($('.summer-map'));
-
+    scrollAnimate(document.querySelector(".js-prizes-about"));
+    scrollAnimate(document.querySelector(".js-prizes-baloon"));
+    scrollAnimate(document.querySelector(".js-summer-promo"));
+    scrollAnimate(document.querySelector(".js-summer-map"));
     promoSlide();
 }
 
@@ -24,27 +24,24 @@ if ($(window).width() > 680)
 
 function scrollAnimate(element)
 {
-    let element1 = $('html');
-    let fontSize = element1.css('font-size');
-
-    let rem = parseInt(fontSize);
-
-    let windowTop = $(window).scrollTop();
-    let windowHeight = $(window).height();
-    let elementTop = $(element).offset().top;
-    let elementHeight = $(element).outerHeight();
-    let documentHeight = $(document).height();   
-
-    if (windowTop + windowHeight >= elementTop + 2 * rem || windowHeight + windowTop == documentHeight || elementHeight + elementTop  < windowHeight)
-    {
-        element.addClass('scroll-animated');
-    }
+    let element1 = document.querySelector('html');
+    let fSize = window.getComputedStyle(element1).fontSize;
+    let rem = parseInt(fSize);
+    let windowT = pageYOffset;
+    let windowH = window.innerHeight;
+    let elementT = element.getBoundingClientRect().top + pageYOffset;
+    let elementH = element.offsetHeight;
+    let documentH = document.body.offsetHeight;
     
+    if (windowT + windowH >= elementT + 2 * rem || windowH + windowT == documentH || elementH + elementT  < windowH)
+    {
+        element.classList.add("scroll-animated");
+    }
 }
 
 
 function promoSlide()
 {
-    $(".promo").addClass('scroll-animated');
-    $(".gallery").addClass('scroll-animated');
+    document.querySelector(".js-promo").classList.add("scroll-animated");
+    document.querySelector(".js-gallery").classList.add("scroll-animated");
 }

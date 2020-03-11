@@ -1,20 +1,19 @@
 
-if ($(window).width() > 680)
+
+let baloonElement = document.querySelector(".js-baloon__image");
+let prizesElement = document.querySelector(".js-prizes");
+
+if (window.innerWidth > 680)
 {
-
-
-    $(".prizes")
-        .mouseover(function() {
-            
-            $(".baloon__image").addClass("animated");
-            $(".baloon__image").removeClass("noanimated");
-            
-            
-        })
-        .mouseout(function(){
-            $(".baloon__image").addClass("noanimated");
-            $(".baloon__image").removeClass("animated");           
-        });
+    prizesElement.addEventListener('mouseover', function()
+    {
+        baloonElement.classList.add("animated");
+        baloonElement.classList.remove("noanimated");
+    });
+        
+    prizesElement.addEventListener('mouseout', function()
+    {
+        baloonElement.classList.add("noanimated");
+        baloonElement.classList.remove("animated"); 
+    });
 }
-
-
