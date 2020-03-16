@@ -11,7 +11,7 @@ if (window.innerWidth < 680)
 
         if (link)
         {
-            if(flag == false && ( event.target.className != 'js-header-logo__image'))
+            if(flag == false && (event.target.classList.contains('js-header-logo__image') == false))
             {
                 openMobileMenu();
             }
