@@ -1,7 +1,12 @@
-
-
-
-body,p,li,ul,a,img,div, h1,h2 {
+body,
+p,
+li,
+ul,
+a,
+img,
+div,
+h1,
+h2 {
     margin: 0px;
     padding: 0px;
 }
@@ -19,8 +24,6 @@ body {
 ul {   
     list-style: none;
 }
-
-
 
 .header-wrap {
     position: fixed;
@@ -68,7 +71,6 @@ ul {
     visibility: hidden;
     overflow: hidden;
 }
-
 
 .header-menu__item {
     width: auto;
@@ -158,12 +160,12 @@ ul {
 }
 
 .mobile-menu__close {
-    transform:translate(60px,0);
+    transform: translate(60px,0);
 }
 
 .mobile-menu__link-close {
     height: 60px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .mobile-menu__text-close {
@@ -172,7 +174,6 @@ ul {
     background: #f0eded;
     color: #8e8d8d;
 }
-
 
 .mobile-menu__animate {
     display: block;
@@ -226,15 +227,15 @@ ul {
 
 .header-menu__icon_2::after {
     background-size: 49px 59px;
-    background-image:url("img/image0.png");
+    background-image: url("img/image0.png");
 }
 
 .header-menu__icon_3::after {
-    background-size:51px 49px;
-    background-image:url("img/image1.png");
+    background-size: 51px 49px;
+    background-image: url("img/image1.png");
 }
 
-.header-menu__text{
+.header-menu__text {
     position: relative;
     padding-top: 85px;
     font-family: "GothamPro-Medium","Arial", sans-serif;
@@ -303,7 +304,7 @@ ul {
 }
 
 .promo-list__icon_1 {
-    background-image:url("img/image5.png");
+    background-image: url("img/image5.png");
 }
 
 .promo-list__icon_2 {
@@ -417,20 +418,18 @@ ul {
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
-    
     width: 50%;
     height: 100%;
     box-sizing: border-box;
-    
     padding: 0.69rem 0.6rem;
     padding-right: 0.55rem;
     background-color: white;  
 }
 
 .gallery-list__item {
-    width:32.5%;
+    width: 32.5%;
     height: 32.4%;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .gallery-list__item:nth-child(3n) {
@@ -615,7 +614,7 @@ ul {
 }
 
 .summer-promo {
-    position:relative;
+    position: relative;
     float: left;
     clear: none;
     width: 50%;
@@ -626,7 +625,7 @@ ul {
 }
 
 .summer-promo__image {
-    position:relative;
+    position: relative;
     width: 100%;
     height: 100%;
     background-image: url("img/lays_img.5f4a68cd.jpg");
@@ -705,7 +704,7 @@ ul {
 }
 
 .copyright__image {
-    float:left;
+    float: left;
     clear: none;
     width: 76px;
     height: 99px;
@@ -766,42 +765,42 @@ ul {
 
 @font-face  {
     font-family: "GothamPro";
-    src: url("../fonts/GothamPro.ttf") format("truetype");
+    src: url("fonts/GothamPro.ttf") format("truetype");
     font-style: normal; 
     font-weight: normal; 
 } 
 
 @font-face {
     font-family: "GothamPro-Light";
-    src: url("../fonts/GothamPro-Light.ttf") format("truetype");
+    src: url("fonts/GothamPro-Light.ttf") format("truetype");
     font-style: normal; 
     font-weight: normal; 
 }
 
 @font-face {
     font-family: "GothamPro-Bold";
-    src: url("../fonts/GothamPro-Bold.ttf") format("truetype");
+    src: url("fonts/GothamPro-Bold.ttf") format("truetype");
     font-style: normal; 
     font-weight: normal; 
 }
 
 @font-face {
     font-family: "GothamPro-Medium";
-    src: url("../fonts/GothamPro-Medium.ttf") format("truetype");
+    src: url("fonts/GothamPro-Medium.ttf") format("truetype");
     font-style: normal; 
     font-weight: normal; 
 }
 
 @font-face {
     font-family: "GothamPro-Black";
-    src: url("../fonts/GothamPro-Black.ttf") format("truetype");
+    src: url("fonts/GothamPro-Black.ttf") format("truetype");
     font-style: normal; 
     font-weight: normal; 
 }
 
 @media (max-width:1400px) {
     
-    .footer{
+    .footer {
         height: 90px;
     }
 
@@ -839,19 +838,19 @@ ul {
     }
 
     .content-wrap {
-        margin-left:110px;
+        margin-left: 110px;
     }
 
-    .footer{
+    .footer {
         height: 60px;
     }
 
     .social__item {
-        width:60px;
+        width: 60px;
         height: 60px;
     }
 
-    .copyright__image{    
+    .copyright__image {    
         width: 50px;
         height: 60px;
     }
@@ -1178,7 +1177,6 @@ ul {
         width: 17rem;
         margin-top: 3.1rem;
         margin-left: 0.2rem;
-        /* width:140px; */
         font-size: 1.5rem;
         line-height: 2rem;
     }

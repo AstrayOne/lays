@@ -1,5 +1,5 @@
+window.addEventListener('beforeunload', handleBeforeunload);
 
-
-window.addEventListener('beforeunload', function(){
+function handleBeforeunload() {
     window.scrollTo(0,0);
-});
+}
